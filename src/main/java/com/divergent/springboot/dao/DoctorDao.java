@@ -5,7 +5,7 @@ import java.util.List;
 import com.divergent.springboot.entity.Doctor;
 
 public interface DoctorDao {
-	void add(Doctor doctor);
+	Doctor add(Doctor doctor);
 
 	List<Doctor> listAll();
 

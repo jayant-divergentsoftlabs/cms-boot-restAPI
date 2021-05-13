@@ -6,7 +6,7 @@ import com.divergent.springboot.entity.Patient;
 
 
 public interface PatientDao {
-	public void add(Patient patient);
+	public Patient add(Patient patient);
 
 	public void remove(Patient patient);
 

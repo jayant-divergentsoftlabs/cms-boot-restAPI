@@ -50,7 +50,7 @@ public class PatientController {
 		String patientAddress = req.getParameter("address");
 
 		Patient patient = new Patient();
-		patientService.add(patientName, patientAge,patientGender,patientWeight,patientContact,patientAddress);
+		patientService.add(patient);
 		return "redirect:/patient";
 
 	}

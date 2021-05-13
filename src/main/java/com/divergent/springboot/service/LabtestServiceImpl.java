@@ -16,11 +16,9 @@ public class LabtestServiceImpl implements LabtestService {
 
 	@Transactional
 	@Override
-	public void add(String name, int price) {
-		Labtest labtest = new Labtest();
-		labtest.getName();
-		labtest.getPrice();
-		labtestDao.add(labtest);
+	public Labtest add(Labtest labtest) {
+
+		return labtestDao.add(labtest);
 	}
 
 	@Transactional
@@ -44,6 +42,12 @@ public class LabtestServiceImpl implements LabtestService {
 	@Override
 	public List<Labtest> list() {
 		return this.labtestDao.listAll();
+	}
+
+	@Override
+	public void update(Labtest labtest) {
+		// TODO Auto-generated method stub
+
 	}
 
 }

@@ -7,7 +7,7 @@ import com.divergent.springboot.entity.Drug;
 
 public interface DrugDao {
 	
-	void add(Drug drug);
+	Drug add(Drug drug);
 
 	List<Drug> listAll();
 

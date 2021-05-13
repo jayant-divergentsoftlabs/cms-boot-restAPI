@@ -9,7 +9,6 @@ import org.springframework.transaction.annotation.Transactional;
 import com.divergent.springboot.dao.AppointmentDao;
 import com.divergent.springboot.entity.Appointment;
 
-
 @Service
 public class AppointmentServiceImpl implements AppointmentService {
 	@Autowired
@@ -17,12 +16,9 @@ public class AppointmentServiceImpl implements AppointmentService {
 
 	@Transactional
 	@Override
-	public void add(int appointmentId, String problem, int patientId, int doctorId) {
+	public Appointment add(Appointment appointment) {
 
-		Appointment appointment = new Appointment();
-		appointment.setId(appointmentId);
-		appointment.setProblem(problem);
-		appointmentDao.add(appointment);
+		return appointmentDao.add(appointment);
 	}
 
 	@Override

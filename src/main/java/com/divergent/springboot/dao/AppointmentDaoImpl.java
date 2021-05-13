@@ -20,8 +20,9 @@ public class AppointmentDaoImpl implements AppointmentDao {
 	private EntityManager em;
 	
 	@Override
-	public void add(Appointment appointment) {
+	public Appointment add(Appointment appointment) {
 		em.persist(appointment);
+		return appointment;
 	}
 
 	@Override

@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.divergent.springboot.dao.PatientDao;
+import com.divergent.springboot.dao.PatientRepository;
 import com.divergent.springboot.entity.Patient;
 
 @Service
@@ -15,18 +16,15 @@ public class PatientServiceImpl implements PatientService {
 	@Autowired
 	private PatientDao patientDao;
 
+	@Autowired
+	PatientRepository patientRepository;
+	
 	@Transactional
 	@Override
-	public void add(String name, int age, String gender, int weight, long contactNo, String address) {
-		Patient patient = new Patient();
-		patient.setName(name);
-		patient.setAge(age);
-		patient.setGender(gender);
-		patient.setWeight(weight);
-		patient.setContactNo(contactNo);
-		patient.setAddress(address);
-		patientDao.add(patient);
-
+	public Patient add(Patient patient) {
+		
+		//return patientDao.add(patient);
+       return patientRepository.save(patient);
 	}
 
 	@Transactional
@@ -50,6 +48,12 @@ public class PatientServiceImpl implements PatientService {
 	@Override
 	public List<Patient> listAll() {
 		return this.patientDao.listAll();
+	}
+
+	@Override
+	public void update(Patient patient) {
+		
+		
 	}
 
 }

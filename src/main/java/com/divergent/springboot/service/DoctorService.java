@@ -5,7 +5,7 @@ import java.util.List;
 import com.divergent.springboot.entity.Doctor;
 
 public interface DoctorService {
-	void add(String name, String speciality, int fee);
+	 public Doctor add(Doctor doctor);
 
 	boolean remove(int id);
 
@@ -14,5 +14,6 @@ public interface DoctorService {
 	List<Doctor> listAll();
 
 	public Doctor update(Doctor doctor);
+
 
 }

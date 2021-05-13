@@ -6,12 +6,14 @@ import com.divergent.springboot.entity.Drug;
 
 public interface DrugService {
 
-	public void add(String name, int price);
+	public Drug add(Drug drug);
 
 	public boolean remove(int id);
 
 	public Drug findById(int id);
 
 	public List<Drug> list();
+
+	public void update(Drug drug);
 
 }

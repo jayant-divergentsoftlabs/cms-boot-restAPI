@@ -4,13 +4,10 @@ import java.util.List;
 
 import com.divergent.springboot.entity.Appointment;
 
-
 public interface AppointmentService {
-	
-public void add(int appointmentId, String problem, int patientId, int doctorId);
-	
+
 	public List<Appointment> getList();
 
-	
+	public Appointment add(Appointment appointment);
 
 }

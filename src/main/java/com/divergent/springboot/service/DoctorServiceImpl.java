@@ -17,12 +17,8 @@ public class DoctorServiceImpl implements DoctorService {
 
 	@Transactional
 	@Override
-	public void add(String name, String speciality, int fee) {
-		Doctor doctor = new Doctor();
-		doctor.setName(name);
-		doctor.setSpeciality(speciality);
-		doctor.setFee(fee);
-		doctorDao.add(doctor);
+	public Doctor add(Doctor doctor) {
+		return doctorDao.add(doctor);
 	}
 
 	@Transactional

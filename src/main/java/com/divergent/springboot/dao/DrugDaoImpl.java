@@ -18,8 +18,9 @@ public class DrugDaoImpl implements DrugDao {
 	private EntityManager em;
 
 	@Override
-	public void add(Drug drug) {
-		em.persist(drug);		
+	public Drug add(Drug drug) {
+		em.persist(drug);
+		return drug;		
 	}
 
 	@Override

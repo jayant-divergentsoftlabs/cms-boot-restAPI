@@ -6,7 +6,7 @@ import com.divergent.springboot.entity.Labtest;
 
 public interface LabtestDao {
 
-	void add(Labtest labtest);
+	Labtest add(Labtest labtest);
 
 	List<Labtest> listAll();
 

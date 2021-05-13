@@ -26,8 +26,9 @@ public class LabtestDaoImpl implements LabtestDao {
 	}
 
 	@Override
-	public void add(Labtest labtest) {
+	public Labtest add(Labtest labtest) {
 		em.persist(labtest);
+		return labtest;
 
 	}
 

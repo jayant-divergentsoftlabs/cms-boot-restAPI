@@ -17,8 +17,9 @@ public class PatientDaoImpl implements PatientDao {
 	private EntityManager em;
 
 	@Override
-	public void add(Patient patient) {
+	public Patient add(Patient patient) {
 		em.persist(patient);
+		return patient;
 	}
 
 	@Override

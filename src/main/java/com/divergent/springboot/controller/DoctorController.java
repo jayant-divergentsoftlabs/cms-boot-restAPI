@@ -42,7 +42,7 @@ public class DoctorController {
 		int doctorFee = Integer.parseInt(req.getParameter("fee"));
 
 		Doctor doctor = new Doctor();
-		doctorService.add(doctorName, doctorSpeciality, doctorFee);
+		doctorService.add(doctor);
 		return "redirect:/doctor";
 
 	}

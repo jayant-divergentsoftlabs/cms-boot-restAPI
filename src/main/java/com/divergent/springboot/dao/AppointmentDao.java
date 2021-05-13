@@ -8,7 +8,7 @@ import com.divergent.springboot.entity.Appointment;
 
 public interface AppointmentDao {
 
-public void add(Appointment appointment);
+public Appointment add(Appointment appointment);
 	
 	public List<Appointment> get();
 	

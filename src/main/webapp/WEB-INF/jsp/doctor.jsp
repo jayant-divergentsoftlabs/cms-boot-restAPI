@@ -75,9 +75,10 @@
 					<div class="col-md-6">
 						<legend>Doctor List</legend>
 						<div class="table-responsive">
-							<table id="example" class="table table-striped table-bordered">
+							<table id="doctor" class="table table-striped table-bordered">
 								<thead>
 									<tr>
+										<th>Id</th>
 										<th>Name</th>
 										<th>Speciality</th>
 										<th>Fee</th>
@@ -87,6 +88,7 @@
 								<tbody>
 									<c:forEach items="${allDoctors}" var="Doctor">
 										<tr>
+											<td><c:out value="${Doctor.id}" /></td>
 											<td><c:out value="${Doctor.name}" /></td>
 											<td><c:out value="${Doctor.speciality}" /></td>
 											<td><c:out value="${Doctor.fee}" /></td>

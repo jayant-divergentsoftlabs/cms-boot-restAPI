@@ -17,11 +17,9 @@ public class DrugServiceImpl implements DrugService {
 
 	@Transactional
 	@Override
-	public void add(String name, int price) {
-		Drug drug = new Drug();
-		drug.setName(name);
-		drug.setPrice(price);
-		drugDao.add(drug);
+	public Drug add(Drug drug) {
+		
+		return drugDao.add(drug);
 	}
 
 	@Transactional
@@ -47,6 +45,12 @@ public class DrugServiceImpl implements DrugService {
 	public List<Drug> list() {
 		return this.drugDao.listAll();
 
+	}
+
+	@Override
+	public void update(Drug drug) {
+		// TODO Auto-generated method stub
+		
 	}
 
 }
